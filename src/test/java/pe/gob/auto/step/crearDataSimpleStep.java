@@ -1,15 +1,12 @@
-package pe.gob.interbank.step;
+package pe.gob.auto.step;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.restassured.response.Response;
-import pe.gob.interbank.util.BodyManager;
-import pe.gob.interbank.util.TxtManager;
-import pe.gob.interbank.util.configManager;
-
-import java.util.List;
-import java.util.Map;
+import pe.gob.auto.util.BodyManager;
+import pe.gob.auto.util.TxtManager;
+import pe.gob.auto.util.configManager;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;

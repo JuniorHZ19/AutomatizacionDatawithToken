@@ -1,4 +1,4 @@
-package pe.gob.interbank.util;
+package pe.gob.auto.util;
 
 
 import io.cucumber.datatable.DataTable;

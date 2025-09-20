@@ -1,4 +1,4 @@
-package pe.gob.interbank.util;
+package pe.gob.auto.util;
 
 import java.io.IOException;
 import java.io.InputStream;

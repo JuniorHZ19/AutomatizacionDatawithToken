@@ -1,4 +1,4 @@
-package pe.gob.interbank.runner;
+package pe.gob.auto.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         stepNotifications = true,
-        glue = {"pe.gob.interbank.step"},
+        glue = {"pe.gob.auto.step"},
         tags = "@CrearDataSimple"
 )
 public class Runner {
