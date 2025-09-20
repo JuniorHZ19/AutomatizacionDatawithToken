@@ -26,10 +26,4 @@ El proyecto está desarrollado en **Java 17** y empaquetado como **JAR** con Mav
 
 ---
 
-## Configuración del proyecto
 
-1. Clona el repositorio:
-
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd InterbankAutomatizacion
