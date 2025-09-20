@@ -1,0 +1,66 @@
+{
+  "messages": [
+    {
+      "_interbank": {
+        "credit_card_campaign": {
+          "codcamp_tc": "1-255646741", // CodigoCampaña
+          "codtrat_tc": "1-255646727", // Codigo de Tratamiento
+          "tipo_oferta": "10",
+          "tipo_cliente": "512",
+          "CurrencyId": "1", // IdMoneda
+          "cod_marca_tarjeta_tc": "01", // MarcaTarjeta
+          "cod_tipo_tarjeta_tc": "14", //  TipoTarjeta
+          "linea_tc": "00000000000100000.00", // MONTO NUEVO DE INCREMENTO
+          "cod_flujo_ingreso_tc": "05", // FLUJO_INGRESO
+          "CardNumber": "<nroDeTarjeta>",
+          "cem_tc": "9118.00", // Cem
+          "deadline": "0", // PlazoMaximo
+          "cod_merchandising_tc": "191101008001", // MERCHANDISING
+          "tem_cd": "15.00", // TASA 1
+          "des_campoadicional5_tc": "31/03/2027", // VENCIMIENTO
+          "AccountAmount": "5000.00", // LINEA ACTUAL
+          "des_campolibre1_tc": "4547751253262109", // CAMPOLIBRE1
+          "des_campolibre2_tc": "0", // CAMPOLIBRE2
+          "des_campolibre3_tc": "0", // CAMPOLIBRE3
+          "des_campolibre4_tc": "0", // CAMPOLIBRE4
+          "des_campolibre5_tc": "0", // CAMPOLIBRE5
+          "tipdoc": "01", //
+          "rate2": "5.14", // TASA 2
+          "CurrencySymbol": "S/ ", // Simbolo Moneda
+          "CurrencySymbol": "Soles", // Descripcion Moneda
+          "PriorityChannel": "APP=3" // PRIORIDAD CANAL
+        },
+        "identities": {
+          "coddoc": "77044540",
+          // DNI Desencriptado
+          "codunicocli": "00000062037590"
+        },
+        "customer": {
+          "ingreso_neto": "10000.00" // RENTA
+        }
+      },
+      "identityMap": {
+        "interbankcoddoc": [
+          {
+            "id": "<dni>" // DNI
+          }
+        ],
+        "interbankcodunicocli": [
+          {
+            "id": "<CU>" // CU
+          }
+        ]
+      },
+      "segmentMembership": {
+        "ups": {
+          "12db2304-1bb3-44ab-b860-b6d1bf960fa1": {
+            "lastQualificationTime": "2023-07-26T21: 35: 25Z",
+            "name": "HBO-Incremento-Linea", // NOMBRE CAMP HBO
+            "status": "realized"
+          }
+        }
+      }
+    }
+  ],
+  "PartitionKey": "47698614"
+}
