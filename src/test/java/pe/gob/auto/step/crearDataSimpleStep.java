@@ -1,12 +1,18 @@
 package pe.gob.auto.step;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.restassured.http.Header;
 import io.restassured.response.Response;
 import pe.gob.auto.util.BodyManager;
 import pe.gob.auto.util.TxtManager;
 import pe.gob.auto.util.configManager;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -15,6 +21,7 @@ public class crearDataSimpleStep {
 
     private String  bodyString;
     private static String token;
+    Map<String, String> headers = new HashMap<>();
 
     @And("usamos el formato de body  {string}")
 
@@ -40,8 +47,8 @@ public class crearDataSimpleStep {
            StringBuilder token= TxtManager.leerArchivoTxt("/src/test/resources/token.txt");
 
             Response response = given()
-                .header("Content-Type", "application/json")
                     .header("Authorization", "Bearer " + token)
+                    .headers(headers)
                     .body(bodyString .replace("\"", "\\\"") )
                 .when()
                 .post(endpoint) // endpoint para crear recurso
@@ -79,5 +86,19 @@ public class crearDataSimpleStep {
         // Guardar el token en  TXT
         TxtManager.crearArchivoTxt("src/test/resources/token.txt",token);
 
+    }
+
+    @And("configuramos las cabezeras :")
+    public void configuramosLasCabezeras(DataTable dataTable) {
+
+        List<Map<String, String>> filas = dataTable.asMaps(String.class, String.class);
+        System.out.println("Las cabezeras son:" );
+        for(Map<String, String> fila : filas ){
+
+            headers.put(fila.get("key"),fila.get("value"));
+            System.out.println(fila);
+        }
+
+        System.out.println("Las cabezeras completa:"+ headers);
     }
 }

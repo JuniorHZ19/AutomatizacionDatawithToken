@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         stepNotifications = true,
         glue = {"pe.gob.auto.step"},
-        tags = "@CrearDataSimple"
+        tags = "@CrearDataDevice"
 )
 public class Runner {
 
